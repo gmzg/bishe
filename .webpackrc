@@ -1,0 +1,6 @@
+{
+    "entry": "src/index.js", 
+     "extraBabelPlugins": [
+      ["import", { "libraryName": "antd-mobile", "style": "css" }]
+    ]
+}
