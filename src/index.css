@@ -1,6 +1,12 @@
 
 html, body, :global(#root) {
   height: 100%;
-  width:100%
+  width:100%;
+  background:white;
+}
+ul,ol,menu {
+  list-style: none; }
+em {
+  font-style: normal;
 }
 

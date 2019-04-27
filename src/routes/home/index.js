@@ -5,9 +5,12 @@ require('./index.less');
 //     <div className={`${className} placeholder`} {...restProps}>Block</div>
 //   );
 class Home extends React.Component {
+    goList = () => {
+        this.props.history.push("/listpage")
+    }
     render() {
         return (
-            <div style={{background:'white',height:'100%'}}>
+            <div style={{height:'100%'}}>
 
                 <div className='home-top'>
                 <div style={{color:'white',fontSize:'35px',textAlign:'center'}}>上校园兼职找工作</div>
@@ -20,7 +23,7 @@ class Home extends React.Component {
                     <div className="body-scroll">
                     <div className="sub-title">技术</div>
                         <Flex wrap="wrap">
-                            <div className="Java">Java</div>
+                            <div className="Java" onClick={this.goList}>Java</div>
                             <div className="Java">PHP</div>
                             <div className="Java">Web前端</div>
                             <div className="Java">数据挖掘</div>

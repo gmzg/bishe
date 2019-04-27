@@ -45,7 +45,7 @@ class Register extends  React.Component {
     const { passwordvalue, phonevalue} = this.state;
     return (
       <Fragment>
-        <div style={{background:'white',height:'100%'}}>
+        <div style={{height:'100%'}}>
             <div className={styles.header}>校园兼职
             <span 
             style={{color:'red',position:'absolute',right:0,top:-20,fontSize:14}}
