@@ -5,6 +5,9 @@ import Signin from './routes/signin/signin';
 import Home from './routes/home/index';
 import ListPage from './routes/listpage/index';
 import DetailPage from './routes/detail/index';
+import Select from './routes/select/index';
+import Online from './routes/online/index';
+import City from './routes/city/index';
 function RouterConfig({ history }) {
   return (
     <Router history={history}>
@@ -15,6 +18,9 @@ function RouterConfig({ history }) {
         <Route path='/home' component={Home}></Route>
         <Route path='/listpage' component={ListPage}></Route>
         <Route path="/detail" component={DetailPage}></Route>
+        <Route path='/select' component={Select}></Route>
+        <Route path='/online' component={Online}></Route>
+        <Route path='/city' component={City}></Route>
       </Switch>
     </Router>
   );

@@ -37,8 +37,8 @@ class Login extends  React.Component {
       phonevalue:value,
     });
   }
-  goHome = () => {
-    this.props.history.push('/home')
+  goSelect = () => {
+    this.props.history.push('/select')
   }
   render () {
     // const { getFieldProps } = this.props.form;
@@ -64,8 +64,8 @@ class Login extends  React.Component {
             >设置密码</InputItem>  
         </List>
         <Button 
-          style={{background:"#5dd5c8",color:'white',height:42,borderRadius:0,margin:'0 20px'}}
-          onClick={this.goHome}
+          style={{background:"#5dd5c8",color:'white',height:42,borderRadius:0,margin:'90px 20px 0'}}
+          onClick={this.goSelect}
         >登录</Button>
       </Fragment>
     )  

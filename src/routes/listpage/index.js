@@ -10,13 +10,11 @@ class ListPage extends React.Component {
         console.log(index)
         const { icontype, listfilter } = this.state;
         if(Number(icontype)===Number(index)) {
-            console.log(1)
             this.setState({
                 icontype:4,
                 listfilter:false
             })
         }else {
-            console.log(2)
             this.setState({
                 icontype:index,
                 listfilter:true
@@ -24,7 +22,15 @@ class ListPage extends React.Component {
         }
     }
     goDetail = () => {
-        this.props.history.push('./detail')
+        this.props.history.push('/detail')
+    }
+
+    goback = () => {
+        this.props.history.goBack();
+    }
+
+    gocity = () => {
+        this.props.history.push('/city')
     }
     render (){
         const filterList=['经验','学历','薪资'] 
@@ -32,9 +38,9 @@ class ListPage extends React.Component {
         return (
             <div style={{height:'100%'}}>
                 <div className='list-top'>
-                   <img alt='首页' src="https://static.zhipin.com/zhipin/v151/h5/wap/images/icon-home.png" style={{width:18,height:18}}/>
+                   <img alt='首页' onClick={this.goback}src="https://static.zhipin.com/zhipin/v151/h5/wap/images/icon-home.png" style={{width:18,height:18}}/>
                    <div className='list-search-box'>
-                       <div className='city'>北京</div>
+                       <div className='city' onClick={this.gocity}>北京</div>
                        <input type="text" defaultValue="java" className='list-search'></input>    
                    </div>
                    <div style={{color:'#5dd5ca',fontSize:15}}>搜索</div>
@@ -59,7 +65,7 @@ class ListPage extends React.Component {
                     <li>大二</li>
                     <li>大三</li>
                     <li>大四</li>
-                </ul>):null
+                </ul>):<div></div>
                 }
                 <div className='list-body'>
                   <div className='list-item' onClick={this.goDetail}>
